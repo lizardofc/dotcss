@@ -1,5 +1,5 @@
 body{
-    background-color: #222222;
+    background-color: #333333;
 }
 
 .heading{
@@ -8,8 +8,12 @@ body{
 }
 
 .navbar-vertical{
+    background-color: #201f1f !important;
     a{
         color: #F22B29 !important;
+    }
+    .navbar-links{
+        background-color: #201f1f !important;
     }
 }
 

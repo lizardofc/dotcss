@@ -1,5 +1,5 @@
 body {
-  background-color: #222222;
+  background-color: #333333;
 }
 
 .heading {
@@ -7,8 +7,16 @@ body {
   border-bottom: 1px #F22B29 solid !important;
 }
 
+.navbar-vertical {
+  background-color: #201f1f !important;
+}
+
 .navbar-vertical a {
   color: #F22B29 !important;
+}
+
+.navbar-vertical .navbar-links {
+  background-color: #201f1f !important;
 }
 
 .content-wrapper {
