@@ -1,7 +1,7 @@
 //=============== Navbar ===============//
 if(document.querySelector('.navbar-horizontal')){
     const navbar = document.querySelector('.navbar-horizontal');
-    const navbarLinks = document.querySelector('.navbar-links');
+    const navbarLinks = document.querySelector('.dev-nav');
     const burger = document.createElement('button');
     burger.classList.add('burger');
     const line1 = document.createElement('div');

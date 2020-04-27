@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>.css - Home</title>
+    <title>Lizard - .css Documentation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css">
     <link rel="stylesheet" href="./hljs/styles/atom-one-dark.css">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./stylard.css">
+    <link rel="stylesheet" href="./dotcss.css">
 </head>
 <body>
     <nav class="navbar navbar-vertical navbar-dark">
@@ -15,6 +16,7 @@
             <li><a href="#navbar">Navbar</a></li>
             <li><a href="#alerts">Alerts</a></li>
             <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#dropdowns">Dropdowns</a></li>
         </ul>
     </nav>
     <div class="content-wrapper">
@@ -24,7 +26,7 @@
                 <input type="text" class="input input-light" name="search-input" id="search-input">
                 <button type="submit" class="btn btn-info">Search</button>
             </form>
-            <ul class="navbar-links">
+            <ul class="navbar-links dev-nav">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact</a></li>
@@ -93,6 +95,21 @@
         <p class="text text-light">
             You can style buttons by yourself using css :) <span class="alert alert-warning">don't forget to add !important after every line in css</span>
         </p>
+
+        <h1 class="heading" id="dropdowns">Dropdowns</h1>
+        <p class="text text-light">Dropdown menu in navbar:</p>
+        <ul class="list list-horizontal bg-light round-5">
+            <li><a href="#dropdowns">Home</a></li>
+            <li class="btn-dropdown">
+                <a href="#dropdowns">Portfolio <i class="bx bx-chevron-down"></i></a>
+                <ul class="dropdown-menu bg-light round-bottom-5">
+                    <li><a href="#dropdowns">Test</a></li>
+                    <li><a href="#dropdowns">Test</a></li>
+                    <li><a href="#dropdowns">Test</a></li>
+                </ul>
+            </li>
+            <li><a href="#dropdowns">Contact</a></li>
+        </ul>
     </div>
 
     <script src="./hljs/highlight.pack.js"></script>
@@ -101,6 +118,6 @@
         hljs.initHighlightingOnLoad();
         hljs.initLineNumbersOnLoad();
     </script>
-    <script src="./stylard.js"></script>
+    <script src="./dotcss.js"></script>
 </body>
 </html>

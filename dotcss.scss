@@ -73,6 +73,7 @@ body{
     .logo{
         font-size: 1.5rem !important;
         text-decoration: none !important;
+        opacity: 1 !important;
 
         &.logo-small{
             font-size: 1rem !important;
@@ -103,23 +104,29 @@ body{
         display: flex !important;
         justify-content: space-around !important;
         align-items: center !important;
-        width: 20% !important;
         list-style: none !important;
-        transition: transform 0.3s ease-in-out !important;
-        
-        a{
-            text-decoration: none !important;
-            opacity: 0.7 !important;
-            transition: all 0.3s ease-in-out !important;
-        }
+        z-index: 10 !important;
+    }
 
-        a:hover{
-            opacity: 1 !important;
+    &.navbar-horizontal{
+        .navbar-links{
+            width: 25% !important;
+            transition: transform 0.3s ease-in-out !important;
         }
+    }
 
-        &.navbar-active{
-            transform: translateX(0%) !important;  
-        }
+    a{
+        text-decoration: none !important;
+        opacity: 0.7 !important;
+        transition: all 0.3s ease-in-out !important;
+    }
+
+    a:hover{
+        opacity: 1 !important;
+    }
+
+    &.navbar-active{
+        transform: translateX(0%) !important;  
     }
 
     .burger{
@@ -244,41 +251,19 @@ body{
 
 .text{
     padding: 10px;
-    color: $DefaultText !important;
+}
 
-    &.text-light{
+.text-light{
+    color: gainsboro !important;
+    a{
         color: gainsboro !important;
-        a{
-            color: gainsboro !important;
-        }
     }
+}
 
-    &.text-success{
-        color: #1adb3e !important;
-        a{
-            color: #1adb3e;
-        }
-    }
-
-    &.text-danger{
-        color: #eb1e1e !important;
-        a{
-            color: #eb1e1e;
-        }
-    }
-
-    &.text-warning{
-        color: #eba71e !important;
-        a{
-            color: #eba71e;
-        }
-    }
-
-    &.text-info{
-        color: #1ebbeb !important;
-        a{
-            color: #1ebbeb;
-        }
+.text-dark{
+    color: $DefaultText !important;
+    a{
+        color: $DefaultText !important;
     }
 }
 
@@ -427,8 +412,85 @@ body{
     transition: all 0s ease-in-out !important;
 }
 
+.list{
+    list-style: none !important;
+    color: dodgerblue !important;
+    padding: 10px !important;
+
+    a{
+        color: dodgerblue !important;
+        text-decoration: none !important;
+    }
+
+    &.list-horizontal{
+        display: flex !important;
+        flex-direction: row !important;
+
+        li{
+            margin: 0px 5px !important;
+        }
+    }
+}
+
+.round-5{ border-radius: 5px !important; }
+.round-10{ border-radius: 10px !important; }
+.round-15{ border-radius: 15px !important; }
+.round-20{ border-radius: 20px !important; }
+.round-full{ border-radius: 50% !important; }
+
+.round-top-5{ border-top-left-radius: 5px !important; border-top-right-radius: 5px !important; }
+.round-top-10{ border-top-left-radius: 10px !important; border-top-right-radius: 10px !important; }
+.round-top-15{ border-top-left-radius: 15px !important; border-top-right-radius: 15px !important; }
+.round-top-20{ border-top-left-radius: 20px !important; border-top-right-radius: 20px !important; }
+.round-top-full{ border-top-left-radius: 50% !important; border-top-right-radius: 50% !important; }
+
+.round-bottom-5{ border-bottom-left-radius: 5px !important; border-bottom-right-radius: 5px !important; }
+.round-bottom-10{ border-bottom-left-radius: 10px !important; border-bottom-right-radius: 10px !important; }
+.round-bottom-15{ border-bottom-left-radius: 15px !important; border-bottom-right-radius: 15px !important; }
+.round-bottom-20{ border-bottom-left-radius: 20px !important; border-bottom-right-radius: 20px !important; }
+.round-bottom-full{ border-bottom-left-radius: 50% !important; border-bottom-right-radius: 50% !important; }
+
+.btn-dropdown{
+    .dropdown-menu{
+        display: none !important;
+        position: absolute !important;
+        list-style: none !important;
+        padding: 10px !important;
+    
+        li{
+            width: 100px;
+            a{
+                display: block;
+                padding: 8px 14px !important;
+            }
+        }
+
+        &.bg-light{
+            li{
+                a:hover{
+                    background-color: gainsboro !important;
+                }
+            }
+        }
+
+        &.bg-dark{
+            li{
+                a:hover{
+                    background-color: #333333 !important;
+                }
+            }
+        }
+    }
+}
+
+.btn-dropdown:hover{
+    .dropdown-menu{
+        display: block !important;
+    }
+}
+
 @media screen and (max-width: 1280px){
-    .navbar{
+    .navbar-horizontal{
         .navbar-links{
             width: 30% !important;
         }
@@ -436,7 +498,7 @@ body{
 }
 
 @media screen and (max-width: 1024px){
-    .navbar{
+    .navbar-horizontal{
         .navbar-links{
             width: 40% !important;
         }
