@@ -6,6 +6,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth !important;
+}
+
 $DefaultOutline: #d3d3d3;
 $DefaultBackground: #f5f5f5;
 $DefaultText: #333333;
@@ -41,6 +45,12 @@ body{
         flex-direction: column !important;
         height: 100vh !important;
         width: 10vw !important;
+        position: fixed !important;
+
+        .navbar-links{
+            flex-direction: column !important;
+            height: 30%;
+        }
     }
 
     .logo{
@@ -141,6 +151,55 @@ body{
             background-color: $DefaultText !important;
         }
     }
+
+    .search{
+        button{
+            border-radius: 5px !important;
+            padding: 5px !important;
+        }
+    }
+}
+
+.input{
+    border-radius: 10px !important;
+    padding: 5px !important;
+    border: none !important;
+
+    &.input-light{
+        border: 1px gainsboro solid !important;
+        color: #666666 !important;
+        background-color: white !important;
+    }
+
+    &.input-dark{
+        border: 1px #333333 solid !important;
+        color: gainsboro !important;
+        background-color: #666666 !important;
+    }
+
+    &.input-success{
+        border: 1px $SuccessOutline solid !important;
+        color: $SuccessText !important;
+        background-color: $SuccessBackground !important;
+    }
+
+    &.input-danger{
+        border: 1px $DangerOutline solid !important;
+        color:$DangerText !important;
+        background-color: $DangerBackground !important;
+    }
+
+    &.input-warning{
+        border: 1px $WarningOutline solid !important;
+        color:$WarningText !important;
+        background-color: $WarningBackground !important;
+    }
+
+    &.input-info{
+        border: 1px $InfoOutline solid !important;
+        color: $InfoText !important;
+        background-color: $InfoBackground !important;
+    }
 }
 
 .bg-light{
@@ -152,19 +211,80 @@ body{
 }
 
 .bg-success{
-    background-color: $SuccessBackground !important;
+    background-color: #1adb3e !important;
 }
 
 .bg-danger{
-    background-color: $DangerBackground !important;
+    background-color: #eb1e1e !important;
 }
 
 .bg-warning{
-    background-color: $WarningBackground !important;
+    background-color: #eba71e !important;
 }
 
 .bg-info{
-    background-color: $InfoBackground !important;
+    background-color: #1ebbeb !important;
+}
+
+.text{
+    padding: 10px;
+    color: $DefaultText !important;
+
+    &.text-success{
+        color: #1adb3e !important;
+        a{
+            color: #1adb3e;
+        }
+    }
+
+    &.text-danger{
+        color: #eb1e1e !important;
+        a{
+            color: #eb1e1e;
+        }
+    }
+
+    &.text-warning{
+        color: #eba71e !important;
+        a{
+            color: #eba71e;
+        }
+    }
+
+    &.text-info{
+        color: #1ebbeb !important;
+        a{
+            color: #1ebbeb;
+        }
+    }
+}
+
+.text-success{
+    color: #1adb3e !important;
+    a{
+        color: #1adb3e !important;
+    }
+}
+
+.text-danger{
+    color: #eb1e1e !important;
+    a{
+        color: #eb1e1e !important;
+    }
+}
+
+.text-warning{
+    color: #eba71e !important;
+    a{
+        color: #eba71e !important;
+    }
+}
+
+.text-info{
+    color: #1ebbeb !important;
+    a{
+        color: #1ebbeb !important;
+    }
 }
 
 .heading{
@@ -178,22 +298,22 @@ body{
     }
 
     &.heading-success{
-        color: $SuccessText !important;
+        color: #1adb3e !important;
         border-color: $SuccessOutline !important;
     }
 
     &.heading-danger{
-        color: $DangerText !important;
+        color: #eb1e1e !important;
         border-color: $DangerOutline !important;
     }
 
     &.heading-warning{
-        color: $WarningText !important;
+        color: #eba71e !important;
         border-color: $WarningOutline!important;
     }
 
     &.heading-info{
-        color: $InfoText !important;
+        color: #1ebbeb !important;
         border-color: $InfoOutline !important;
     }
 }
@@ -238,9 +358,10 @@ body{
 .btn{
     padding: 10px !important;
     border-radius: 10px !important;
-    transition: background-color 0.3s ease-in-out !important;
+    transition: all 0.3s ease-in-out !important;
     cursor: pointer !important;
     text-decoration: none !important;
+    border: none !important;
 
     &.btn-default{
         border: 1px $DefaultOutline solid !important;
@@ -249,52 +370,38 @@ body{
     }
 
     &.btn-success{
-        border: 1px $SuccessOutline solid !important;
-        color: $SuccessText !important;
-        background-color: $SuccessBackground;
+        color: white !important;
+        background-color: #1adb3e;
     }
 
     &.btn-danger{
-        border: 1px $DangerOutline solid !important;
-        color: $DangerText !important;
-        background-color: $DangerBackground;
+        color: white !important;
+        background-color: #eb1e1e;
     }
 
     &.btn-warning{
-        border: 1px $WarningOutline solid !important;
-        color: $WarningText !important;
-        background-color: $WarningBackground;
+        color: white !important;
+        background-color: #eba71e;
     }
 
     &.btn-info{
-        border: 1px $InfoOutline solid !important;
-        color: $InfoText !important;
-        background-color: $InfoBackground;
+        color: white !important;
+        background-color: #1ebbeb;
     }
 }
 
+.btn:hover{
+    opacity: 0.8 !important;
+}
+
 .btn-default:hover{
+    opacity: 1 !important;
     background-color: lightgray !important;
 }
 
-.btn-success:hover{
-    background-color: $SuccessOutline !important;
-}
-
-.btn-danger:hover{
-    background-color: $DangerOutline !important;
-}
-
-.btn-warning:hover{
-    background-color: $WarningOutline !important;
-}
-
-.btn-info:hover{
-    background-color: $InfoOutline !important;
-}
-
 .btn:active{
-    opacity: 0.8 !important;
+    opacity: 0.6 !important;
+    transition: all 0s ease-in-out !important;
 }
 
 @media screen and (max-width: 1280px){
@@ -341,4 +448,9 @@ body{
             display: inline-block !important;
         }
     }
+}
+
+span.quote{
+    background-color: $WarningBackground;
+    color: #eb1e1e;
 }

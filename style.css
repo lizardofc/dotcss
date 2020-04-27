@@ -1,0 +1,15 @@
+.content-wrapper{
+    width: 88.7vw;
+    margin-left: auto;
+}
+
+.hljs-ln-numbers {
+    user-select: none;
+
+    padding-right: 8px !important;
+    border-right: 1px gray solid;
+}
+
+.hljs-ln-code {
+    padding-left: 10px !important;
+}
