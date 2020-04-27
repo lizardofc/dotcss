@@ -1,6 +1,6 @@
 //=============== Navbar ===============//
-if(document.querySelector('.navbar')){
-    const navbar = document.querySelector('.navbar');
+if(document.querySelector('.navbar-horizontal')){
+    const navbar = document.querySelector('.navbar-horizontal');
     const navbarLinks = document.querySelector('.navbar-links');
     const burger = document.createElement('button');
     burger.classList.add('burger');

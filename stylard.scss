@@ -88,7 +88,7 @@ body{
         align-items: center !important;
         width: 20% !important;
         list-style: none !important;
-        transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out !important;
         
         a{
             text-decoration: none !important;
@@ -152,10 +152,9 @@ body{
         }
     }
 
-    .search{
+    .search-form{
         button{
-            border-radius: 5px !important;
-            padding: 5px !important;
+            padding: 6px !important;
         }
     }
 }
@@ -207,7 +206,7 @@ body{
 }
 
 .bg-dark{
-    background-color: #444444 !important;
+    background-color: #333333 !important;
 }
 
 .bg-success{
@@ -229,6 +228,13 @@ body{
 .text{
     padding: 10px;
     color: $DefaultText !important;
+
+    &.text-light{
+        color: gainsboro !important;
+        a{
+            color: gainsboro !important;
+        }
+    }
 
     &.text-success{
         color: #1adb3e !important;
@@ -422,16 +428,6 @@ body{
 
 @media screen and (max-width: 768px){
     .navbar{
-        .navbar-links{
-            position: absolute !important;
-            height: 90vh !important;
-            width: 50% !important;
-            right: 0 !important;
-            flex-direction: column !important;
-            top: 10vh !important;
-            transform: translateX(100%) !important;
-        }
-
         &.bg-light{
             .navbar-links{
                 background-color: $DefaultBackground;
@@ -440,12 +436,49 @@ body{
 
         &.bg-dark{
             .navbar-links{
-                background-color: #444444;
+                background-color: #333333;
             }
         }
 
-        .burger{
-            display: inline-block !important;
+        &.navbar-horizontal{
+            .navbar-links{
+                position: absolute !important;
+                height: 90vh !important;
+                width: 50% !important;
+                right: 0 !important;
+                flex-direction: column !important;
+                top: 10vh !important;
+                transform: translateX(100%) !important;
+            }
+
+            .burger{
+                display: inline-block !important;
+            }
+
+            .search-form{
+                input{
+                    width: 100px;
+                }
+            }
+        }
+
+        &.navbar-vertical{
+            width: 20vw !important;
+
+            .navbar-links{
+                height: 30% !important;
+                display: flex !important;
+                justify-content: space-around !important;
+                align-items: center !important;
+                list-style: none !important;
+                transition: transform 0.3s ease-in-out;
+                transform: translateX(0%) !important;
+                position: static !important;
+
+                a{
+                    font-size: 13px !important;
+                }
+            }
         }
     }
 }

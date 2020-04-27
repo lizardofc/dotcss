@@ -1,0 +1,36 @@
+body{
+    background-color: #222222;
+}
+
+.heading{
+    color: #F22B29 !important;
+    border-bottom: 1px #F22B29 solid !important;
+}
+
+.navbar-vertical{
+    a{
+        color: #F22B29 !important;
+    }
+}
+
+.content-wrapper{
+    width: 88.7vw;
+    margin-left: auto;
+}
+
+.hljs-ln-numbers {
+    user-select: none;
+
+    padding-right: 8px !important;
+    border-right: 1px gray solid;
+}
+
+.hljs-ln-code {
+    padding-left: 10px !important;
+}
+
+@media screen and (max-width: 768px){
+    .content-wrapper{
+        width: 77.5vw;
+    }
+}
